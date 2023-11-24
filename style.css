@@ -1,0 +1,121 @@
+/* font size for scree 1024px */
+
+
+
+@font-face {
+    font-family: 'Futura';
+    src: url(/fonts/Futura-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url(/fonts/Gilroy-Medium.ttf);
+}
+
+:root {
+    --background: #F7F7F7;
+    --foreground: #000;
+    --border: #000;
+}
+
+::selection {
+    background: #000;
+    color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Futura', sans-serif;
+    font-size: 14px;
+    color: var(--foreground);
+    background: var(--background);
+}
+
+#play-container {
+    pointer-events: none;
+    z-index: 999;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    /* transform: translate(-50%, -50%); */
+}
+
+#play {
+    z-index: 999;
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Futura";
+    font-weight: 500;
+    font-size: 18px;
+    background: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.04em;
+    pointer-events: none;
+    transform: scale(0);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#product-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+#product-hover #effect {
+    pointer-events: none;
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+    background: red;
+    transform: scale(1);
+    transition: background 0.6s ease-in-out, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#hero {
+    margin: 0 16px;
+}
+
+.container {
+    /* padding-top: 17vw; */
+    min-height: 100vh;
+    position: relative;
+}
+
+.container h1 {
+    margin-top: 90px;
+    font-size: calc((98vw - 48px) * 0.1695);
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 0.90em;
+    font-weight: 500;
+    letter-spacing: -12px;
+}
+
+.container .video-container {
+    height: 100vh;
+    width: 100%;
+}
+
+.video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
