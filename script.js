@@ -16,7 +16,7 @@ enterInVideo();
 
 function leaveVideo() {
     videoContainer.addEventListener("mouseleave", function () {
-        play.style.transform = "scale(0) translate(0, 0)";
+        play.style.transform = "scale(0)";
     })
 }
 leaveVideo();
