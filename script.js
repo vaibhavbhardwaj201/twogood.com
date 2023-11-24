@@ -58,5 +58,4 @@ const tl = gsap.timeline({
       stagger: 0.1,
       ease: 'expo.out',
       delay: 0.2
-      // onComplete: () => titleSplit.revert()
     })

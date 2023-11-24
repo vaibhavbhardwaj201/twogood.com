@@ -88,7 +88,7 @@ body {
 }
 
 #hero {
-    margin: 0 16px;
+    margin: 18px 16px 50px;
 }
 
 .container {
@@ -137,4 +137,42 @@ body {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+#shop {
+    margin: 0 16px;
+    height: 100vh;
+    position: relative;
+}
+
+.good {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+}
+
+.good span {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: "Gilroy";
+    margin-bottom: 1px;
+}
+
+.shop-container {
+    display: flex;
+    gap: 1.5vw;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.shop-container .shop-product {
+    height: 100%;
+    width: 100%;
+}
+
+.shop-product img {
+    height: 100%;
+    width: 100%;
 }
