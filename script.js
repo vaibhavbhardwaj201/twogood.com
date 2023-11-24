@@ -1,3 +1,8 @@
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#page'),
+    smooth: true
+});
+
 var playContainer = document.getElementById("play-container");
 var play = document.getElementById("play");
 
@@ -49,9 +54,6 @@ const tl = gsap.timeline({
       }
     })
 
-    // tl.set(titleRef.current, {
-    //   opacity: 1
-    // })
     tl.from(".container h1 span", {
       y: '120%',
       opacity: 0,
