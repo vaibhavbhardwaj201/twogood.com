@@ -141,6 +141,14 @@ button {
     top: 100%;
 }
 
+@media screen and (max-width: 1023.98px) {
+    .nav-container .links {
+        display: none;
+    }
+    
+    
+}
+
 #play-container {
     pointer-events: none;
     z-index: 999;
@@ -195,11 +203,12 @@ button {
 
 #hero {
     margin: 0 16px 50px;
-    padding-top: 215px;
+    margin-top: 65px;
 }
 
 .container {
     position: relative;
+    padding-top: 150px;
 }
 
 .container h1 {
@@ -209,7 +218,7 @@ button {
     text-align: center;
     line-height: 0.85em;
     font-weight: 500;
-    letter-spacing: -12px;
+    letter-spacing: -9px;
 }
 
 @media screen and (max-width: 1023.98px) {
