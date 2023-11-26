@@ -40,6 +40,107 @@ body {
     background: var(--background);
 }
 
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 131px;
+    /* background: red; */
+    z-index: 1001;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+#nav .logo-container {
+    color: var(--foreground);
+    display: flex;
+    flex-direction: column;
+    width: 106px;
+    height: 83px;
+    overflow: hidden;
+}
+
+#nav .logo-container svg {
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+#nav .logo-container span:nth-child(1) {
+    width: 106;
+    height: 83;
+    fill: none;
+}
+
+#nav .logo-container span:nth-child(2) {
+    width: 62;
+    height: 63;
+    fill: none;
+}
+
+#nav .nav-container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.nav-container .links {
+    display: flex;
+    justify-content: center;
+    font-family: "Gilroy";
+
+}
+
+.links .link {
+    margin-right: 64px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.nav-container .icons {
+    width: 130px;
+    height: 36px;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+    margin-right: -10px;
+    position: relative;
+    background-color: var(--background);
+    border-radius: 50px;
+}
+
+.icons .menu {
+    width: 18px;
+    height: 6px;
+    position: relative;
+    background-color: transparent;
+}
+
+.icons .menu .menu-line {
+    background: #000;
+    margin-bottom: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+}
+
+.icons .menu .menu-line:nth-child(2) {
+    top: 100%;
+}
+
 #play-container {
     pointer-events: none;
     z-index: 999;
@@ -75,6 +176,7 @@ body {
     top: 0;
     left: 0;
     pointer-events: none;
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 #product-hover #effect {
@@ -83,28 +185,29 @@ body {
     height: 256px;
     border-radius: 50%;
     background: rgb(230, 230, 230);
-    transform: scale(1);
+    transform: scale(0);
     transition: background 0.6s ease-in-out, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* #page {
+    margin-top: 131px;
+} */
 
 #hero {
-    margin: 18px 16px 50px;
+    margin: 0 16px 50px;
+    padding-top: 215px;
 }
 
 .container {
-    /* padding-top: 17vw; */
-    /* min-height: 100vh; */
     position: relative;
 }
 
 .container h1 {
-    margin-top: 90px;
     font-size: calc((98vw - 48px) * 0.1695);
     text-transform: uppercase;
     white-space: nowrap;
     text-align: center;
-    line-height: 0.90em;
+    line-height: 0.85em;
     font-weight: 500;
     letter-spacing: -12px;
 }
@@ -145,7 +248,7 @@ body {
     margin: 0 16px;
     /* height: 100vh; */
     position: relative;
-    margin-bottom: 15vw;
+    margin-bottom: 5vw;
 }
 
 .good {
